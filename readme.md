@@ -1,4 +1,4 @@
-# TransferCard 项目分析
+# WalletCard 项目分析
 
 ## 项目简介
 TransferCard 是一个基于区块链的数字资产转移与链上名片系统。项目集成了前端（Next.js/React）、后端（Node.js/Express）、智能合约（Solidity）三大部分，支持以下主要功能：
