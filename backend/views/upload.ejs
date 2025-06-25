@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>上传 WalletCard 名片</title>
+</head>
+<body>
+  <h1>上传名片信息</h1>
+  <form action="/upload" method="POST" enctype="multipart/form-data">
+    <label>昵称：</label><br>
+    <input type="text" name="name" required><br><br>
+
+    <label>描述：</label><br>
+    <input type="text" name="description"><br><br>
+
+    <label>Twitter：</label><br>
+    <input type="text" name="twitter"><br><br>
+
+    <label>备注：</label><br>
+    <input type="text" name="note"><br><br>
+
+    <label>上传头像：</label><br>
+    <input type="file" name="avatar" accept="image/*" required><br><br>
+
+    <button type="submit">上传并生成 TokenURI</button>
+  </form>
+
+  <% if (tokenURI) { %>
+    <h2>生成成功 ✅</h2>
+    <p>tokenURI: <code><%= tokenURI %></code></p>
+  <% } %>
+
+  <% if (error) { %>
+    <p style="color:red;"><%= error %></p>
+  <% } %>
+</body>
+</html>
